@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/softeng325-lab1-rmi-concert-client/softeng325-lab1-rmi-concert-client.iml" filepath="$PROJECT_DIR$/softeng325-lab1-rmi-concert-client/softeng325-lab1-rmi-concert-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/softeng325-lab1-rmi-concert-common/softeng325-lab1-rmi-concert-common.iml" filepath="$PROJECT_DIR$/softeng325-lab1-rmi-concert-common/softeng325-lab1-rmi-concert-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/softeng325-lab1-rmi-concert-server/softeng325-lab1-rmi-concert-server.iml" filepath="$PROJECT_DIR$/softeng325-lab1-rmi-concert-server/softeng325-lab1-rmi-concert-server.iml" />
+    </modules>
+  </component>
+</project>
