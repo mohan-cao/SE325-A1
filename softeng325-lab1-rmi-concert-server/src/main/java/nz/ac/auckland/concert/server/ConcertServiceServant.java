@@ -19,16 +19,16 @@ public class ConcertServiceServant extends UnicastRemoteObject implements Concer
         super();
         _concerts = new HashMap<Long,Concert>();
         _maxSize = maxSize;
-        _nextID = 1;
+        _nextID = 0;
     }
 
     @Override
     public synchronized Concert createConcert(Concert concert) throws RemoteException {
-        Concert c = new Concert(concert.title(),concert.date());
-        if(concert.id()<0||_concerts.containsKey(concert.id())) return null;
-        _concerts.put(_nextID++,concert);
-        c.setUniqueID(_nextID);
-        return c;
+        if(concert.id()>-1||_concerts.containsKey(concert.id())) return null;
+        concert.setUniqueID(_nextID);
+        _concerts.put(_nextID,concert);
+        _nextID++;
+        return concert;
     }
 
     @Override

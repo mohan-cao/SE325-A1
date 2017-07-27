@@ -4,13 +4,15 @@ import nz.ac.auckland.concert.common.Concert;
 import nz.ac.auckland.concert.common.ConcertService;
 
 import java.io.Console;
+import java.net.InetAddress;
+import java.net.UnknownHostException;
 import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 
 public class Server {
-    public static void main(String args[]){
+    public static void main(String args[]) throws UnknownHostException{
         try {
             final int MAX_SHAPES = 100;
 
@@ -24,7 +26,7 @@ public class Server {
             lookupService.rebind(ConcertService.class.getName(), service);
 
             Console c = System.console();
-            c.readLine("Press Enter to shutdown the server ");
+            c.readLine("Press Enter to shutdown the server on " + InetAddress.getLocalHost());
             lookupService.unbind(ConcertService.class.getName());
 
             System.out.println(
